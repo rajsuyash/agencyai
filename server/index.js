@@ -2,6 +2,8 @@ const express = require('express');
 const { GoogleAuth } = require('google-auth-library');
 const cors = require('cors'); // Import cors
 
+console.log('GOOGLE_APPLICATION_CREDENTIALS:', process.env.GOOGLE_APPLICATION_CREDENTIALS);
+
 const app = express();
 const port = 3001; // Or any other port you prefer
 
