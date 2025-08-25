@@ -8,3 +8,13 @@ services:
       - type: rewrite
         source: /*
         destination: /index.html
+  - type: web
+    name: catalyst-ai-backend
+    env: node
+    buildCommand: npm install
+    startCommand: node index.js
+    rootDir: server
+    # Environment variables for the backend
+    envVars:
+      - key: GOOGLE_APPLICATION_CREDENTIALS_JSON
+        sync: false # This will be set as a secret file
